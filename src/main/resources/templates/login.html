@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
     xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="layout/plantilla :: head">
         <title>TODO supply a title</title>
-        <meta charset="UTF-8">
         
     </head>
     <body>
+        <header th:replace="layout/plantilla :: header"></header>
         <h1>Login</h1>
         
         <form method="POST" th:action="@{/login}">
@@ -15,7 +15,7 @@
             <br/>
             <label for="password">Password:</label>
             <input type="password" name="password" id="password"/>
-            <br>
+            <br/>
             <input type="submit" value="Login"/>
         </form>
     </body>
